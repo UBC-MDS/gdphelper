@@ -1,4 +1,4 @@
-# eda-helper
+# gdphelper
 
 This package is designed to take the url of any of the several dozen GDP-related csv datasets from the [Canadian Governement Open Data Portal](https://open.canada.ca/en/open-data) and download, clean load, summarize and visualize the data contained within.  
 
