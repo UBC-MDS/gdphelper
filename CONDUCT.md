@@ -38,6 +38,14 @@ Instances of abusive, harassing, or otherwise unacceptable behavior may be repor
 
 Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.
 
+## Project Team
+
+- Aldo Barros          aldosaltao@gmail.com
+- Gabe Fairbrother     gfairbrother@gmail.com
+- Wanying Ye            Wanying.ye2020@gmail.com
+- Ramiro Mejia         ramiromejiap@gmail.com
+
+
 ## Attribution
 
 This Code of Conduct is adapted from the [Contributor Covenant homepage](http://contributor-covenant.org/version/1/4), version 1.4.
