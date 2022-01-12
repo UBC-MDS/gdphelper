@@ -1,6 +1,6 @@
 # gdphelper
 
-This package is designed to take the url of any of the several dozen GDP-related csv datasets from the [Canadian Governement Open Data Portal](https://open.canada.ca/en/open-data) and download, clean load, summarize and visualize the data contained within.  
+This package is designed to take the url of any of the several dozen GDP-related csv datasets from the [Canadian Government Open Data Portal](https://open.canada.ca/en/open-data) and download, clean load, summarize and visualize the data contained within.  
 
 It contains 4 functions:
 (TODO proper names)
@@ -13,7 +13,7 @@ Function #4: Generates a set of visualizations of the data set.
 ## Installation
 
 ```bash
-$ pip install gov-ca-gdp-helper
+$ pip install gdphelper
 ```
 
 ## Usage
@@ -26,8 +26,8 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 
 ## License
 
-`gov-ca-gdp-helper` was created by Aldo Barros, Gabriel Fairbrother, Ramiro Mejia, Wanying Ye. It is licensed under the terms of the MIT license.
+`gdphelper` was created by Aldo Barros, Gabriel Fairbrother, Ramiro Mejia, Wanying Ye. It is licensed under the terms of the MIT license.
 
 ## Credits
 
-`gov-ca-gdp-helper` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
+`gdphelper` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
