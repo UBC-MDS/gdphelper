@@ -5,9 +5,9 @@ This package is designed to take the url of any of the several dozen GDP-related
 It contains 4 functions:
 (TODO proper names)
 
-Function #1: Downloads the zipped data, extracts and renames the appropriate csv.
-Function #2: Loads the data, removes spurious columns, renames used columns, scrubs and data issues.
-Function #3: Evaluates the data category and generates summary statistics by year, region, industry, etc.
+Function #1: Downloads the zipped data, extracts and renames the appropriate csv.  
+Function #2: Loads the data, removes spurious columns, renames used columns, scrubs and data issues. Returns a basic data frame and some category flags.   
+Function #3: Evaluates the data category and generates summary statistics by year, region, industry, etc.  
 Function #4: Generates a set of visualizations of the data set.
 
 ## Installation
