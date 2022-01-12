@@ -20,6 +20,14 @@ $ pip install gdphelper
 
 - TODO
 
+## Contributors
+
+- Aldo Barros          aldosaltao@gmail.com
+- Gabe Fairbrother     gfairbrother@gmail.com
+- Wanying Ye           Wanying.ye2020@gmail.com
+- Ramiro Mejia         ramiromejiap@gmail.com
+
+
 ## Contributing
 
 Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
