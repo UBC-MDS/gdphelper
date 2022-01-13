@@ -6,9 +6,12 @@ It contains 4 functions:
 (TODO proper names)
 
 - `download_zip`: Downloads the zipped data, extracts and renames the appropriate csv.  
-- Function #2: Loads the data, removes spurious columns, renames used columns, scrubs and data issues. Returns a basic data frame and some category flags.   
+- Function #2: Loads the data, removes spurious columns, renames used columns, scrubs and data issues. Returns a basic data frame and some category flags.
 - Function #3: Evaluates the data category and generates summary statistics by year, region, industry, etc.  
 - Function #4: Generates a set of visualizations of the data set.
+
+This package is built upon a bunch of popular packages in Python ecosystem, including
+`zipfile`, ... What makes this package unique is that it incorporates the common functionalities and streamlines the workflow from downloading the data to performing simple EDA, specifically for the GDP-related data from the Canadian Government Open Data Portal.
 
 ## Installation
 
@@ -26,7 +29,6 @@ $ pip install gdphelper
 - Gabe Fairbrother     gfairbrother@gmail.com
 - Wanying Ye           wanying.ye2020@gmail.com
 - Ramiro Mejia         ramiromejiap@gmail.com
-
 
 ## Contributing
 
