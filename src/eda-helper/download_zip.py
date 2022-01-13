@@ -11,7 +11,7 @@ def download_zip(url, filename=None, filetype='csv', exclude_meta=True):
     filename : str or list of str, default None
         the filename or list of filenames that the unzipped file(s) have.
         If None, 'data1.csv', 'data2.csv' ...  will be the filenames
-    filetype : str, default 'csv'
+    filetype : {'csv', 'all'}, default 'csv'
         the types of files that will be extracted. If 'csv', only csv
         files are extracted'. If 'all', files of all types are extracted
     exclude_meta : bool, default True
@@ -20,10 +20,9 @@ def download_zip(url, filename=None, filetype='csv', exclude_meta=True):
 
     Returns
     -------
-    collections.Counter
-        dict-like object where keys are words and values are counts.
+    None
 
     Examples
     --------
-    >>> count_words("text.txt")
+    >>> download_zip("https://www150.statcan.gc.ca/n1/tbl/csv/36100400-eng.zip")
     """
