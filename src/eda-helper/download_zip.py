@@ -10,7 +10,8 @@ def download_zip(url, filename=None, filetype='csv', exclude_meta=True):
         URL to the zip file (ends with .zip)
     filename : str or list of str, default None
         the filename or list of filenames that the unzipped file(s) have.
-        If None, 'data1.csv', 'data2.csv' ...  will be the filenames
+        If None, 'open_canada_data1.csv', 'open_canada_data2.csv' ...  
+        will be the filenames
     filetype : {'csv', 'all'}, default 'csv'
         the types of files that will be extracted. If 'csv', only csv
         files are extracted'. If 'all', files of all types are extracted
