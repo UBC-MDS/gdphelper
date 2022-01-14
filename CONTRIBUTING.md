@@ -42,8 +42,8 @@ If you are proposing a feature:
 
 Ready to contribute? Here's how to set up `eda-helper` for local development.
 
-1. Download a copy of `eda-helper` locally.
-2. Install `eda-helper` using `poetry`:
+1. Download a copy of `gov_ca_gdp_helper` locally.
+2. Install `gov_ca_gdp_helper` using `poetry`:
 
     ```console
     $ poetry install
@@ -69,5 +69,5 @@ Before you submit a pull request, check that it meets these guidelines:
 
 ## Code of Conduct
 
-Please note that the `eda-helper` project is released with a 
+Please note that the `gov_ca_gdp_helper` project is released with a 
 Code of Conduct. By contributing to this project you agree to abide by its terms.
