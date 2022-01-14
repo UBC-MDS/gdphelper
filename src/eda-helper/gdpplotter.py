@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 
-def line_plot(type_chart, type_feature):
+def gdpplotter(type_chart, type_feature):
     """Plot a line chart of periods and the selected feature.
     
     Parameters
@@ -21,6 +21,6 @@ def line_plot(type_chart, type_feature):
 
     Examples
     --------
-    >>> xxxxx
+    >>> 
 
     """
