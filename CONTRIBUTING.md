@@ -38,34 +38,47 @@ If you are proposing a feature:
 * Remember that this is a volunteer-driven project, and that contributions
   are welcome :)
 
-## Get Started!
+### How to contribute
 
-Ready to contribute? Here's how to set up `eda-helper` for local development.
+The `gdphelper` follows GitHub worflow. The steps we are going to follow to contribute to this project are:
 
-1. Download a copy of `gdphelper` locally.
-2. Install `gdphelper` using `poetry`:
+- Create a branch.
+- Commit changes.
+- Create a pull request.
+- One contributor should check the changes and approve them.
+- Finally, merge the pull request.
 
-    ```console
-    $ poetry install
-    ```
 
-3. Use `git` (or similar) to create a branch for local development and make your changes:
+If you are a new contributor to the project, visit :  https://github.com/UBC-MDS/gdphelper and click the 'Fork' icon to get a copy of the project.
 
-    ```console
-    $ git checkout -b name-of-your-bugfix-or-feature
-    ```
+Clone the repository locally:
 
-4. When you're done making changes, check that your changes conform to any code formatting requirements and pass any tests.
+```{bash}
+git clone https://github.com/UBC-MDS/gdphelper.git
 
-5. Commit your changes and open a pull request.
+```
 
-## Pull Request Guidelines
+Add the upstream repository:
 
-Before you submit a pull request, check that it meets these guidelines:
 
-1. The pull request should include additional tests if appropriate.
-2. If the pull request adds functionality, the docs should be updated.
-3. The pull request should work for all currently supported operating systems and versions of Python.
+```{bash}
+git clone git remote add upstream https://github.com/UBC-MDS/gdphelper
+
+```
+
+Create a branch with a suitable name. E.g branch name 'test':
+
+```{bash}
+
+git checkout -b test
+
+```
+
+Commit locally your progress with an proper commit message.
+
+Create a pull request in the Github website using the green button.
+
+Finally the pull must be aproved by at least one of the core team members before merging to the main branch.
 
 ## Code of Conduct
 
