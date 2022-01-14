@@ -8,8 +8,9 @@ It contains 4 functions:
 
 gdpimporter: Downloads the zipped data, extracts, renames the appropriate csv, and returns a dataframe along with the title from the meta data.    
 gdpcleaner: Loads the data, removes spurious columns, renames used columns, scrubs and data issues. Returns a basic data frame and some category flags.   
-Function #3: Evaluates the data category and generates summary statistics by year, region, industry, etc.  
+gdpdescribe : Evaluates the data category and generates summary statistics by year, region, industry, etc.  
 gdpplotter: Generates a set of visualizations of the data set according to the user's choices.
+
 
 ## Installation
 
