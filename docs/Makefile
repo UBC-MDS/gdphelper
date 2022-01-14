@@ -3,7 +3,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = gov_ca_gdp_helper
+SPHINXPROJ    = gdphelper
 SOURCEDIR     = .
 BUILDDIR      = _build
 
