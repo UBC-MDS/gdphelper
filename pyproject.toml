@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "eda-helper"
+name = "gdphelper"
 version = "0.0.1"
 description = "A package for streamlining EDA processes for basic Data Analysis"
 authors = ["Aldo Barros, Gabriel Fairbrother, Ramiro Mejia, Wanying Ye"]

@@ -6,7 +6,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u"eda-helper"
+project = u"gdphelper"
 copyright = u"2022, Aldo Barros, Gabriel Fairbrother, Ramiro Mejia, Wanying Ye"
 author = u"Aldo Barros, Gabriel Fairbrother, Ramiro Mejia, Wanying Ye"
 
