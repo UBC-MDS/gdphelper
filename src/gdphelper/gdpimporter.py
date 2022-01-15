@@ -10,10 +10,10 @@ def gdpimporter(url, filename=None, filetype='csv'):
     ----------
     url : str
         URL to the zip file (ends with .zip)
-    filename : str or list of str, default None
-        The filename or list of filenames that the unzipped file(s) have.
-        If None, 'open_canada_data1.csv', 'open_canada_data2.csv' ...  
-        will be the filenames
+    filename : str
+        the filename that the unzipped csv data (not the MetaData) has. 
+        If None, 'open_canada_data.csv' will be the filename. 
+        This argument is not useful when filetype is set to 'all'
     filetype : {'csv', 'all'}, default 'csv'
         the types of files that will be extracted. If 'csv', only csv
         files are extracted'. If 'all', files of all types are extracted
@@ -27,5 +27,5 @@ def gdpimporter(url, filename=None, filetype='csv'):
 
     Examples
     --------
-    >>> download_zip("https://www150.statcan.gc.ca/n1/tbl/csv/36100400-eng.zip")
+    >>> gdpimporter("https://www150.statcan.gc.ca/n1/tbl/csv/36100400-eng.zip")
     """
