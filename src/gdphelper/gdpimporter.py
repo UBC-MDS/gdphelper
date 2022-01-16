@@ -1,3 +1,7 @@
+import requests, zipfile
+import os
+import pandas as pd
+
 def gdpimporter(url, filename=None, filetype='csv'):
     """Download the zipped file, unzip, rename the unzipped files, and
     outputs a dataframe along with the title from meta data.
@@ -29,3 +33,31 @@ def gdpimporter(url, filename=None, filetype='csv'):
     --------
     >>> gdpimporter("https://www150.statcan.gc.ca/n1/tbl/csv/36100400-eng.zip")
     """
+    zipname = url.split("/")[-1]
+    req = requests.get(url)
+
+    with open(zipname, "wb") as code:
+        code.write(req.content)
+    zipdata = zipfile.ZipFile(zipname)
+    zipinfos = zipdata.infolist()
+    
+    if filetype == "csv":
+        # iterate through each file
+        for zipinfo in zipinfos:
+            # This will do the renaming
+            if zipinfo.filename.endswith(".csv") and not zipinfo.filename.endswith("MetaData.csv"):
+                if filename == None: 
+                    zipinfo.filename = f"data_opencan.csv"
+                else:  ## must be a str
+                    zipinfo.filename = f"{filename}.csv"
+            zipdata.extract(zipinfo)
+    else:
+        for zipinfo in zipinfos:
+            zipdata.extract(zipinfo)        
+    
+    for filepath in os.listdir():  ## change this if want another directory
+        if filepath.endswith("MetaData.csv"):
+            metadata = pd.read_csv(filepath)
+        elif filepath.endswith(".csv"):
+            data = pd.read_csv(filepath)
+    return data, metadata.index[0]
