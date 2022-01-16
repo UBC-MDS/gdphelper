@@ -51,7 +51,7 @@ def gdpimporter(url, filename=None, filetype='csv'):
                 else:  ## must be a str
                     zipinfo.filename = f"{filename}.csv"
             zipdata.extract(zipinfo)
-    else:
+    elif filetype == "all":
         for zipinfo in zipinfos:
             zipdata.extract(zipinfo)        
     
