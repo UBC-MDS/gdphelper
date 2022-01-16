@@ -6,8 +6,7 @@ def test_gdp_importer_return_type():
     """Test the return type of gdpimporter."""
     out_df, out_str = gdpimporter("https://www150.statcan.gc.ca/n1/tbl/csv/36100400-eng.zip")
     assert isinstance(out_df, pd.core.frame.DataFrame), "The first element of the returned tuple is not a pandas dataframe!"
-    # assert isinstance(out_str, str), "The second element of the returned tuple is not a string!"
-    assert out_str == 'Gross domestic product (GDP) at basic prices, by industry', "The title information from MetaData is not correctly extracted!"
+    assert out_str == 'Gross domestic product (GDP) at basic prices, by industry, provinces and territories, percentage share', "The title information from MetaData is not correctly extracted!"
 
 def test_gdp_importer_download_data():
     """Test if gdpimporter unzips the file and rename the csv as expected."""

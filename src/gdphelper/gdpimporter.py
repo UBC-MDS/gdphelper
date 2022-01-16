@@ -56,7 +56,7 @@ def gdpimporter(url, filename=None, filetype='csv'):
             zipdata.extract(zipinfo)        
     
     for filepath in os.listdir():  ## change this if want another directory
-        if filepath.endswith("MetaData.csv"):
+        if filepath == f"{zipname[:-8]}_MetaData.csv":
             metadata = pd.read_csv(filepath)
         elif filepath.endswith(".csv"):
             data = pd.read_csv(filepath)
