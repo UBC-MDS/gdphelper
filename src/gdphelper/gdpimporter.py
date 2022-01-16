@@ -33,7 +33,15 @@ def gdpimporter(url, filename=None, filetype='csv'):
     --------
     >>> gdpimporter("https://www150.statcan.gc.ca/n1/tbl/csv/36100400-eng.zip")
     """
-    zipname = url.split("/")[-1]
+    # Exception handling: check if the arguments are feasible
+    if (filename != None) and (not isinstance(filename, str)):
+        raise TypeError("'filename' should be either None (default) or a string.")
+    if filetype not in ['csv', 'all']:
+        raise ValueError("'filetype' should either be 'csv' (by default) or 'all'.")
+    if (not isinstance(url, str)) or (not url.endswith('.zip')):
+        raise ValueError("'url' should be a valid url of a zipfile that ends with '.zip'.")
+
+    zipname = url.split("/")[-1]  ## get the name of original zipfile
     req = requests.get(url)
 
     with open(zipname, "wb") as code:
@@ -47,17 +55,22 @@ def gdpimporter(url, filename=None, filetype='csv'):
             # This will do the renaming
             if zipinfo.filename.endswith(".csv") and not zipinfo.filename.endswith("MetaData.csv"):
                 if filename == None: 
-                    zipinfo.filename = f"data_opencan.csv"
+                    zipinfo.filename = f"open_canada_data.csv"
                 else:  ## must be a str
                     zipinfo.filename = f"{filename}.csv"
             zipdata.extract(zipinfo)
-    elif filetype == "all":
+    else:
         for zipinfo in zipinfos:
             zipdata.extract(zipinfo)        
     
-    for filepath in os.listdir():  ## change this if want another directory
+    for filepath in os.listdir(): 
         if filepath == f"{zipname[:-8]}_MetaData.csv":
             metadata = pd.read_csv(filepath)
-        elif filepath.endswith(".csv"):
-            data = pd.read_csv(filepath)
+            continue
+        if filename == None:
+            if filepath == "open_canada_data.csv":
+                data = pd.read_csv(filepath)
+        else:
+            if filepath == f"{filename}.csv":
+                data = pd.read_csv(filepath)
     return data, metadata.index[0]
