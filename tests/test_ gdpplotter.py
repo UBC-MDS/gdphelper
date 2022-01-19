@@ -1,0 +1,26 @@
+from gdphelper.gdpplotter import gdpplotter
+import pandas as pd
+import numpy as np
+import
+
+def test_gdpplotter():
+
+    data = pd.read_csv("test_13100347.csv")
+    x = "VALUE"
+    y = "GEO"
+    data_name=13100347
+    aggregation = "canada"
+    gdpplotter(data_name, aggregation)
+
+    #checking if a plot was drawn
+    num_figures = plt.gcf().number
+    assert num_figures > 0, "None chart was created"
+    print("Passed!")
+
+    #checking the column types
+    assert data[x].dtype.type == np.float64, "Not valid data type, should be numeric"
+    print("Passed!")
+    
+    #checking the column types
+    assert data[y].dtype.type == np.object_ , "Not valid data type, should be categorical"
+    print("Passed!")
