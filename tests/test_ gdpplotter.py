@@ -5,10 +5,10 @@ import numpy as np
 
 def test_gdpplotter():
 
-    data = pd.read_csv("test_13100347.csv")
+    data = pd.read_csv("36100408.csv")
     x = "VALUE"
     y = "GEO"
-    data_name=13100347
+    data_name=36100408
     aggregation = "canada"
     gdpplotter(data_name, aggregation)
 
