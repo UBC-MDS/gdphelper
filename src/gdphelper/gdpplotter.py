@@ -22,6 +22,21 @@ def gdpplotter(data_name, aggregation):
     --------
     >>>
     """
+    # Checking the inputs of the function: data_name
+    if type(data_name) == int:
+        pass
+    else:
+        raise ValueError("data_name should be the NUMBER of your downloaded databese")
+    
+    # Checking the inputs of the function: aggregation
+    if aggregation in ["canada", "province"]:
+        pass
+    else:
+        raise ValueError(
+            'The aggragation should be "canada" or "province".'
+        )
+
+
     #reading the database within the function
     file = f"{data_name}.csv"
     df = pd.read_csv(file)
@@ -31,7 +46,8 @@ def gdpplotter(data_name, aggregation):
     #grouping by region
     df_grouped_region = df.groupby(['REF_DATE','GEO']).agg(VALUE = ('VALUE', 'sum')).reset_index()
     #pivoting
-    df_grouped_region_pivoted = pd.pivot_table(df_grouped_region, index=['REF_DATE'], values=['VALUE'], columns=['GEO'],fill_value=0, aggfunc=np.sum).reset_index()
+    df_grouped_region_pivoted = pd.pivot_table(df_grouped_region, index=['REF_DATE'], values=['VALUE'], columns=['GEO'],
+                                               fill_value=0, aggfunc=np.sum).reset_index()
     #fixing columns
     df_grouped_region_pivoted.columns = ['_'.join(col).strip() for col in df_grouped_region_pivoted.columns.values]
     print("database was transformed")
