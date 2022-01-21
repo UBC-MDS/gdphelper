@@ -62,14 +62,12 @@ def gdpimporter(url, filename=None, filetype='csv'):
     else:
         for zipinfo in zipinfos:
             zipdata.extract(zipinfo)        
+    zipdata.close()
     
     for filepath in os.listdir(): 
         if filepath == f"{zipname[:-8]}_MetaData.csv":
             metadata = pd.read_csv(filepath)
-            os.remove(filepath)  # Clean up the metadata
             continue
-        elif filepath.endswith('.zip'):
-            os.remove(filepath) # Clean up zip
         if filename == None:
             if filepath == "open_canada_data.csv":
                 data = pd.read_csv(filepath)
