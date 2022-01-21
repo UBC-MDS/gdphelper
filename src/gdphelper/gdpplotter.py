@@ -30,7 +30,7 @@ def gdpplotter(cleaned_Dataframe, aggregation):
 
     """
     # check for DataFrame input argument
-    if (type(cleaned_frame) != pd.DataFrame):
+    if (type(cleaned_Dataframe) != pd.DataFrame):
          raise TypeError("Argument must be a specific Pandas DataFrame, use the 'gpdcleaner' to create this dataFrame")
     
     # checking the inputs of the function: aggregation
@@ -47,7 +47,7 @@ def gdpplotter(cleaned_Dataframe, aggregation):
     # transforming the database to fit on matplolib's data structure.
     
     # using the same unit for the charts: millions
-    unit= ['millions']
+    unit= ['millions', 'units ']
     df_filtered = df[df['Scale'].isin(unit)]
     
     # grouping relevant information
@@ -64,8 +64,11 @@ def gdpplotter(cleaned_Dataframe, aggregation):
 
     # selecting the province names
     provinces = list(df_grouped_region_pivoted.columns)
+    #print("column names before the 'remove': ", provinces)
     provinces.remove('Date_')
+    #print("column names remove 01': ", provinces)
     provinces.remove('Value_Canada')
+    #print("column names remove 02': ", provinces)
     provinces
     # checking the provinces whitin the dataFrame
     if provinces == []:
@@ -74,24 +77,46 @@ def gdpplotter(cleaned_Dataframe, aggregation):
     else:
         print("checking province names: we have all provinces in this dataset")
 
-    # drawing charts according to the selected option
-    if aggregation == "province":
-        #chart 01
-        df_grouped_region_pivoted.plot(x='Date_', y=provinces)
-        #place legend in center right of plot
+    # checking the one year dataset
+    year = df['Date'].unique()
+    print(f"This database contains {year} years for the GDP analysis")
+    if df['Date'].nunique() == 1 and aggregation == "canada":
+        # Draw a vertical bar chart
+        df_grouped_region_pivoted.plot.bar(x="Date_", y="Value_Canada", rot=70)
         plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
         plt.ylabel("GPD (CAD$ - millions)")
         plt.xlabel("Years")
-        plt.title("GDP (CAD$ millions) VS Years", loc='center')
-        plt.show()
+        plt.title(f"GDP (CAD$ millions) VS Year - {year}", loc='center')
+        plt.show(block=True)
 
-    if aggregation == "canada":
-        # chart 02
-        df_grouped_region_pivoted.plot(x='Date_', y='Value_Canada')
-        # place legend in center right of plot
+    elif df['Date'].nunique() == 1 and aggregation == "province":
+        df_grouped_region_pivoted.plot.bar(x="Date_", y=provinces, rot=70)
         plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
         plt.ylabel("GPD (CAD$ - millions)")
         plt.xlabel("Years")
-        plt.title("GDP (CAD$ millions) VS Years", loc='center')
-        plt.show()
+        plt.title(f"GDP (CAD$ millions) VS Year - {year}", loc='center')
+        plt.show(block=True)
+
+    else:
+
+        # drawing charts according to the selected option
+        if aggregation == "province":
+            #chart 01
+            df_grouped_region_pivoted.plot(x='Date_', y=provinces)
+            #place legend in center right of plot
+            plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
+            plt.ylabel("GPD (CAD$ - millions)")
+            plt.xlabel("Years")
+            plt.title("GDP (CAD$ millions) VS Years", loc='center')
+            plt.show()
+
+        if aggregation == "canada":
+            # chart 02
+            df_grouped_region_pivoted.plot(x='Date_', y='Value_Canada')
+            # place legend in center right of plot
+            plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
+            plt.ylabel("GPD (CAD$ - millions)")
+            plt.xlabel("Years")
+            plt.title("GDP (CAD$ millions) VS Years", loc='center')
+            plt.show()
 

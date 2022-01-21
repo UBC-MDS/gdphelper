@@ -6,7 +6,7 @@ import numpy as np
 def test_gdpplotter():
     
     # importing toydata from test/
-    data = pd.read_csv('tests/test_13100347.csv')
+    data = pd.read_csv('test_13100347.csv')
     
     # changing columns name manually (simulating outputs from gdpcleaner)
     renamed_data = data.rename(columns={'REF_DATE': 'Date', 'GEO': 'Location',
