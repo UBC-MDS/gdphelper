@@ -2,6 +2,7 @@ import pandas as pd
 def gdpcleaner(gdpdata: pd.DataFrame):
     """
     Author: Gabe Fairbrother
+
     Remove spurious columns, Rename relevant columns, Remove NaNs
 
 
