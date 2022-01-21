@@ -14,17 +14,14 @@ def test_gdp_importer_download_data():
     # if filename is not specified
     gdpimporter("https://www150.statcan.gc.ca/n1/tbl/csv/36100400-eng.zip")
     assert os.path.isfile('open_canada_data.csv'), "The csv data file is not upzipped and/or renamed correctly!"
-    assert '36100400_MetaData.csv' in os.listdir(), "The metadata csv is not properly unzipped."
     # if filename is specified
     gdpimporter("https://www150.statcan.gc.ca/n1/tbl/csv/36100401-eng.zip", filename='gdp_census')
     assert os.path.isfile('gdp_census.csv'), "The csv data file is not upzipped and/or renamed correctly!"
-    assert '36100401_MetaData.csv' in os.listdir(), "The metadata csv is not properly unzipped."
 
 def test_gdp_importer_unzip_all():
-    """Test if gdpimporter unzips all files without further renaming them."""
+    """Test if gdpimporter unzips files without further renaming them."""
     gdpimporter("https://www150.statcan.gc.ca/n1/tbl/csv/36100401-eng.zip", filetype='all')
     assert os.path.isfile('36100401.csv'), "The csv data file is not upzipped and/or has wrong file name!"
-    assert os.path.isfile('36100401_MetaData.csv'), "The metadata csv is not properly unzipped!"
 
 
 def test_gdp_importer_filename_error():
