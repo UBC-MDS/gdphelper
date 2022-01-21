@@ -1,6 +1,8 @@
 import pandas as pd
 def gdpcleaner(gdpdata: pd.DataFrame):
-    """Remove spurious columns, Rename relevant columns, Scrub any string artifacts (eg [T008])
+    """
+    Author: Gabe Fairbrother
+    Remove spurious columns, Rename relevant columns, Scrub any string artifacts (eg [T008])
 
 
     Parameters
@@ -18,6 +20,17 @@ def gdpcleaner(gdpdata: pd.DataFrame):
     --------
     #>>> result = gdpcleaner(example_data)
     """
-    cleaned_frame = gdpdata['REF_DAT', 'GEO', 'Prices', 'SCALAR_FACTOR', 'VALUE']
+    #Check for DataFrame input argument
+    if (type(gdpdata == None)):
+        raise ValueError("Must specify a Pandas DataFrame")
 
-    cleaned_frame = gdpdata.rename(columns={'REF_DAT': 'Date', 'GEO': 'Location', 'SCALAR_FACTOR': 'Scale', 'VALUE': 'Value'})
+    if (type(gdpdata) != pd.DataFrame):
+        raise TypeError("Argument must be a Pandas DataFrame")
+
+    #Remove spurious columns
+    cleaned_frame = gdpdata.drop(columns=['DGUID', 'UOM', 'UOM_ID', 'SCALAR_ID', 'VECTOR', 'COORDINATE', 'STATUS', 'SYMBOL', 'TERMINATED', 'DECIMALS'])
+ 
+    #Drop any rows with null value
+    cleaned_frame = cleaned_frame.dropna()
+    
+    cleaned_frame = gdpdata.rename(columns={'REF_DAT': 'Date', 'GEO': 'Location', 'SCALAR_FACTOR': 'Scale', 'VALUE': 'Value', 'UOM': 'Unit'})
