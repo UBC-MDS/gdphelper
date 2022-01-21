@@ -6,7 +6,7 @@ import numpy as np
 def test_gdpplotter():
     
     # importing toydata from test/
-    data = pd.read_csv("test/test_13100347.csv")
+    data = pd.read_csv("tests/test_13100347.csv")
     
     # changing columns name manually (simulating outputs from gdpcleaner)
     renamed_data = data.rename(columns={'REF_DATE': 'Date', 'GEO': 'Location',
@@ -35,4 +35,8 @@ def test_gdpplotter():
     
     # checking the column types z
     assert renamed_data[z].dtype.type == np.float64, "Not valid data type, should be numeric"
+    print("Passed!")
+    
+    #cheecking the DataFrame structure
+    assert isinstance(renamed_data, pd.core.frame.DataFrame), "The dataset is not a pd.DataFrame object, please use gpdcleaner to get the right DataFrame"
     print("Passed!")
