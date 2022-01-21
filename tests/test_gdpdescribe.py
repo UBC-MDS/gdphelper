@@ -39,4 +39,12 @@ def test_gdpdescribe():
     assert results["F"].iloc[1] == 1, "Incorrect value"
     assert results["M"].iloc[2] == 2, "Incorrect value"
 
+    assert results['F'].iloc[2] == 1, "Incorrect value"
+    assert results['M'].iloc[2] == 2, "Incorrect value"
+    print("Passed!")
+
+    assert (data[y].nunique() < data.shape[0]), 'Variable Y has unique values in every row'
+    print("Passed!")
+
+    assert (x in data.columns.tolist() and y in data.columns.tolist()), 'Variables are not in the dataset'
     print("Passed!")
