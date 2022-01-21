@@ -16,6 +16,7 @@ ipykernel = "^6.7.0"
 requests = "^2.27.1"
 matplotlib = "^3.5.1"
 
+
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
 pytest-cov = "^3.0.0"
