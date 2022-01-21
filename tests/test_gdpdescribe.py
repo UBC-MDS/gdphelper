@@ -4,7 +4,7 @@ import numpy as np
 
 def test_gdpdescribe():
 
-    data = pd.read_csv("test_13100347.csv")
+    data = pd.read_csv('tests/test_13100347.csv')
     x = "VALUE"
     y = "GEO"
     stats = ["mean", "median"]
