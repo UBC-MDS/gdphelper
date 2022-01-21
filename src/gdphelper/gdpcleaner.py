@@ -5,6 +5,7 @@ def gdpcleaner(gdpdata: pd.DataFrame):
     Remove spurious columns, Rename relevant columns, Remove NaNs
 
 
+
     Parameters
     ----------
     gdpdata: DataFrame 
@@ -13,6 +14,7 @@ def gdpcleaner(gdpdata: pd.DataFrame):
 
     Returns
     -------
+
     DataFrame:  A cleaned and simplified DataFrame of the relevant columns for summary and visualization. 
     Possible columns (dataset dependent) include:
         Date: Date of data
@@ -29,6 +31,7 @@ def gdpcleaner(gdpdata: pd.DataFrame):
     --------
     #>>> result = gdpcleaner(example_data)
     """
+
     #Check for DataFrame input argument
     if (type(gdpdata) != pd.DataFrame):
          raise TypeError("Argument must be a Pandas DataFrame")
@@ -58,3 +61,4 @@ def gdpcleaner(gdpdata: pd.DataFrame):
             cleaned_frame = cleaned_frame.rename(columns={column: 'Special_Industry'})
 
     return cleaned_frame        
+
