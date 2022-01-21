@@ -34,8 +34,10 @@ def gdpcleaner(gdpdata: pd.DataFrame):
     """
 
     #Check for DataFrame input argument
-    if (type(gdpdata) != pd.DataFrame):
-         raise TypeError("Argument must be a Pandas DataFrame")
+    if (isinstance(gdpdata, pd.core.frame.DataFrame)):
+        pass
+    else:
+        raise TypeError("Argument must be a Pandas DataFrame")
 
     cleaned_frame = gdpdata
 
