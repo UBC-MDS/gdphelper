@@ -1,6 +1,9 @@
 import pandas as pd
 def gdpcleaner(gdpdata: pd.DataFrame):
-    """Remove spurious columns, Rename relevant columns, Scrub any string artifacts (eg [T008])
+    """
+    Author: Gabe Fairbrother
+    Remove spurious columns, Rename relevant columns, Remove NaNs
+
 
 
     Parameters
@@ -11,13 +14,51 @@ def gdpcleaner(gdpdata: pd.DataFrame):
 
     Returns
     -------
-    DataFrame:  A cleaned and simplified DataFrame of the relevant columns for summary and visualization
 
+    DataFrame:  A cleaned and simplified DataFrame of the relevant columns for summary and visualization. 
+    Possible columns (dataset dependent) include:
+        Date: Date of data
+        Location: Province or Jurisdiction
+        Scale: Scale of the Value column (Percent, Millions, etc)
+        Unit: Unit of Measure
+        Value: Portion of the GDP for the Location and Date
+        NAICS_Class: North American Industry Classification System ID 
+        Industry: Industry of Record
+        Sub-sector: Non-profit sub-sector
+        Special_Industry: Special Industry Aggregate
 
     Examples
     --------
     #>>> result = gdpcleaner(example_data)
     """
-    cleaned_frame = gdpdata['REF_DAT', 'GEO', 'Prices', 'SCALAR_FACTOR', 'VALUE']
 
-    cleaned_frame = gdpdata.rename(columns={'REF_DAT': 'Date', 'GEO': 'Location', 'SCALAR_FACTOR': 'Scale', 'VALUE': 'Value'})
+    #Check for DataFrame input argument
+    if (type(gdpdata) != pd.DataFrame):
+         raise TypeError("Argument must be a Pandas DataFrame")
+
+    cleaned_frame = gdpdata
+
+    #Remove spurious columns
+    spurious = ['DGUID', 'UOM_ID', 'SCALAR_ID', 'VECTOR', 'COORDINATE', 
+                                          'STATUS', 'SYMBOL', 'TERMINATED', 'DECIMALS', 'Value', 'Seasonal adjustment']
+    for column in cleaned_frame.columns :
+        if column in spurious:
+            cleaned_frame = cleaned_frame.drop(columns=column)
+
+
+    #Drop any rows with null value
+    cleaned_frame = cleaned_frame.dropna()
+    
+    #Rename relevant columns
+    cleaned_frame = cleaned_frame.rename(columns={'REF_DATE': 'Date', 'GEO': 'Location', 
+                                            'SCALAR_FACTOR': 'Scale', 'VALUE': 'Value', 'UOM': 'Unit'})
+
+    for column in cleaned_frame.columns:
+        if 'NAICS' in column:
+
+            cleaned_frame = cleaned_frame.rename(columns={column: 'NAICS_Class'})
+        if 'aggregat' in column: #Not a spelling mistake, there are multiple similar column headers in different datasets
+            cleaned_frame = cleaned_frame.rename(columns={column: 'Special_Industry'})
+
+    return cleaned_frame        
+

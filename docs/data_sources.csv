@@ -1,27 +1,25 @@
 Name,URL,Category,Further Review
-"Gross domestic product (GDP) at basic prices, by industry, provinces and territories, percentage share",https://open.canada.ca/data/en/dataset/dc5c4808-ef54-41c9-9a65-e99e89fe673a,,"Historical (real-time) releases of gross domestic product (GDP) at basic prices, by industry, monthly"
-"Gross domestic product (GDP) at basic prices, by industry, provinces and territories",https://open.canada.ca/data/en/dataset/182ea565-76b4-4287-8fea-a7b9b5bd3e48,,"Environmental and Clean Technology Products Economic Account, gross domestic product"
-"Gross domestic product (GDP) at basic prices, by industry, quarterly average",https://open.canada.ca/data/en/dataset/b28a3861-bf9e-4d67-9164-fdeb64ec3b02,,Tourism share of gross domestic product at basic prices
-"Gross domestic product (GDP) at basic prices, by industry, monthly",https://open.canada.ca/data/en/dataset/625c0d81-2eee-40cf-b402-17a26f3fb2e1,,"Environmental and Clean Technology Products Economic Account, Gross Domestic Product, inactive"
-"Gross domestic product (GDP) at basic prices, by industry, provinces and territories, contributions to national percentage change",https://open.canada.ca/data/en/dataset/630d3395-fb77-44ef-80c6-fae214886a7b,,"Production, income and outlay accounts of nonprofit institutions and volunteering, annual, 1997 - 2008"
-"Gross domestic product (GDP) at basic prices, by industry",https://open.canada.ca/data/en/dataset/ce6975cf-ba5b-43d1-94a3-f888805a73a5,,"Income and gross domestic product (GDP) by primary area of activity, nonprofit institutions and volunteering, annual, 1997 - 2008"
-"Gross domestic product (GDP) at basic prices, by sector and industry, provincial and territorial",https://open.canada.ca/data/en/dataset/befea406-cb91-4937-98d9-d615b6ff7a32,,
-"Gross domestic product (GDP) at basic prices, by census metropolitan area (CMA)",https://open.canada.ca/data/en/dataset/5374c3f3-9bd7-4c1f-9655-c3cc7f041109,,
-Gross domestic product (GDP) and income of non-profit institutions by activity,https://open.canada.ca/data/en/dataset/df7086d4-20d9-49b2-9746-c8256e19ae90,,
-"Gross domestic product (GDP) at basic prices, by North American Industry Classification System (NAICS)",https://open.canada.ca/data/en/dataset/d35b3860-a39c-42db-b062-81ad370a6eda,,
-"Gross domestic product (GDP) at basic prices, by North American Industry Classification System (NAICS), quarterly",https://open.canada.ca/data/en/dataset/18bad3f1-d536-4d0a-8b97-54dfda8bdc50,,
-"Gross domestic product (GDP) at basic prices, by North American Industry Classification System (NAICS), annual",https://open.canada.ca/data/en/dataset/6cf7b61c-2c84-4f11-b796-b1a4d818e7c2,,
-"Gross domestic product (GDP) at basic prices, by North American Industry Classification System (NAICS), monthly",https://open.canada.ca/data/en/dataset/ac9cd2c7-52eb-469f-a9d8-bfa184e553f4,,
-"Gross domestic product (GDP) at basic prices, by North American Industry Classification System (NAICS) and province",https://open.canada.ca/data/en/dataset/c28d3467-551b-477d-80f8-25bedc3710c2,,
-Gross domestic product (GDP) of non-profit institutions by sub-sector,https://open.canada.ca/data/en/dataset/1043f4a3-3dc4-4eea-b3b4-e57619312074,,
-"Gross domestic product (GDP) at basic prices, by special industry aggregates based on the North American Industry Classification System (NAICS) and by province",https://open.canada.ca/data/en/dataset/788d6c24-8033-4afc-8863-0bb135ce4a32,,
-"Gross domestic product (GDP) at basic prices, special industry aggregations based on the North American Industry Classification System (NAICS), annual",https://open.canada.ca/data/en/dataset/9f2116fc-265a-419f-a921-2d747c039f34,,
-"Gross domestic product (GDP) at basic prices, special industry aggregations based on the North American Industry Classification System (NAICS), quarterly",https://open.canada.ca/data/en/dataset/c28c35e8-a9ee-403a-8969-a84be5f5e37e,,
-"Gross domestic product (GDP) at basic prices, special industry aggregations based on the North American Industry Classification System (NAICS), monthly",https://open.canada.ca/data/en/dataset/d797e810-3e5c-4b2c-aa13-d0a491cd224a,,
-"Gross domestic product (GDP) at basic price in current dollars, System of National Accounts (SNA) benchmark values, by North American Industry Classification System (NAICS)",https://open.canada.ca/data/en/dataset/67dbaa67-1c79-44bf-837f-2ac73fd2561c,,
-"Provincial gross domestic product (GDP) at basic prices in current dollars, System of National Accounts (SNA) benchmark values, by sector and North American Industry Classification System (NAICS)",https://open.canada.ca/data/en/dataset/83b33630-f2b3-426c-bb15-c58a4030c6f6,,
-"Gross domestic product (GDP) at basic price in current dollars, System of National Accounts (SNA) benchmark values, special industry aggregations based on the North American Industry Classification System (NAICS)",https://open.canada.ca/data/en/dataset/e049fc79-bf3c-4bda-9430-0945ed15ed33,,
-"Gross domestic product (GDP) and Gross National Product (GNP) at market prices and net national income at basic prices, quarterly, 1961 - 2012",https://open.canada.ca/data/en/dataset/1303189a-6b99-4ca9-a4d2-ba6cd2e0dac5,,
-"Gross domestic product (GDP) and Gross National Product (GNP) at market prices and net national income at basic prices, annual, 1961 - 2011",https://open.canada.ca/data/en/dataset/2ec2389b-0ec3-44dd-ae98-cf2750d7c640,,
-"Gross domestic product (GDP), income-based, annual, 1961 - 2011",https://open.canada.ca/data/en/dataset/e4e2c9b1-210b-46d0-bc88-f2bed514970d,,
-"Gross domestic product (GDP), income-based, provincial economic accounts, annual, 1981 - 2010",https://open.canada.ca/data/en/dataset/51b59eff-c899-42bb-891e-c349828ebb97,,
+
+"Gross domestic product (GDP) at basic prices, by industry, provinces and territories, percentage share",https://www150.statcan.gc.ca/n1/tbl/csv/36100400-eng.zip,,"Historical (real-time) releases of gross domestic product (GDP) at basic prices, by industry, monthly"
+"Gross domestic product (GDP) at basic prices, by industry, provinces and territories",https://www150.statcan.gc.ca/n1/tbl/csv/36100402-eng.zip,,"Environmental and Clean Technology Products Economic Account, gross domestic product"
+"Gross domestic product (GDP) at basic prices, by industry, quarterly average",https://www150.statcan.gc.ca/n1/tbl/csv/36100449-eng.zip,,Tourism share of gross domestic product at basic prices
+"Gross domestic product (GDP) at basic prices, by industry, monthly",https://www150.statcan.gc.ca/n1/tbl/csv/36100434-eng.zip,,"Environmental and Clean Technology Products Economic Account, Gross Domestic Product, inactive"
+"Gross domestic product (GDP) at basic prices, by industry, provinces and territories, contributions to national percentage change",https://www150.statcan.gc.ca/n1/tbl/csv/36100658-eng.zip,,"Production, income and outlay accounts of nonprofit institutions and volunteering, annual, 1997 - 2008"
+"Gross domestic product (GDP) at basic prices, by industry",https://www150.statcan.gc.ca/n1/tbl/csv/36100401-eng.zip,,"Income and gross domestic product (GDP) by primary area of activity, nonprofit institutions and volunteering, annual, 1997 - 2008"
+"Gross domestic product (GDP) at basic prices, by sector and industry, provincial and territorial",https://www150.statcan.gc.ca/n1/tbl/csv/36100487-eng.zip,,
+"Gross domestic product (GDP) at basic prices, by census metropolitan area (CMA)",https://www150.statcan.gc.ca/n1/tbl/csv/36100468-eng.zip,,
+Gross domestic product (GDP) and income of non-profit institutions by activity,https://www150.statcan.gc.ca/n1/tbl/csv/36100614-eng.zip,,
+"Gross domestic product (GDP) at basic prices, by North American Industry Classification System (NAICS)",https://www150.statcan.gc.ca/n1/tbl/csv/36100398-eng.zip,,
+"Gross domestic product (GDP) at basic prices, by North American Industry Classification System (NAICS), quarterly",https://www150.statcan.gc.ca/n1/tbl/csv/36100389-eng.zip,,
+"Gross domestic product (GDP) at basic prices, by North American Industry Classification System (NAICS), annual",https://www150.statcan.gc.ca/n1/tbl/csv/36100388-eng.zip,,
+"Gross domestic product (GDP) at basic prices, by North American Industry Classification System (NAICS), monthly",https://www150.statcan.gc.ca/n1/tbl/csv/36100390-eng.zip,,
+"Gross domestic product (GDP) at basic prices, by North American Industry Classification System (NAICS) and province",https://www150.statcan.gc.ca/n1/tbl/csv/36100396-eng.zip,,
+Gross domestic product (GDP) of non-profit institutions by sub-sector,https://www150.statcan.gc.ca/n1/tbl/csv/36100616-eng.zip,,
+"Gross domestic product (GDP) at basic prices, by special industry aggregates based on the North American Industry Classification System (NAICS) and by province",https://www150.statcan.gc.ca/n1/tbl/csv/36100397-eng.zip,,
+"Gross domestic product (GDP) at basic prices, special industry aggregations based on the North American Industry Classification System (NAICS), annual",https://www150.statcan.gc.ca/n1/tbl/csv/36100391-eng.zip,,
+"Gross domestic product (GDP) at basic prices, special industry aggregations based on the North American Industry Classification System (NAICS), quarterly",https://www150.statcan.gc.ca/n1/tbl/csv/36100392-eng.zip,,
+"Gross domestic product (GDP) at basic prices, special industry aggregations based on the North American Industry Classification System (NAICS), monthly",https://www150.statcan.gc.ca/n1/tbl/csv/36100393-eng.zip,,
+"Gross domestic product (GDP) at basic price in current dollars, System of National Accounts (SNA) benchmark values, by North American Industry Classification System (NAICS)",https://www150.statcan.gc.ca/n1/tbl/csv/36100394-eng.zip,,
+"Provincial gross domestic product (GDP) at basic prices in current dollars, System of National Accounts (SNA) benchmark values, by sector and North American Industry Classification System (NAICS)",https://www150.statcan.gc.ca/n1/tbl/csv/36100408-eng.zip,,
+"Gross domestic product (GDP) at basic price in current dollars, System of National Accounts (SNA) benchmark values, special industry aggregations based on the North American Industry Classification System (NAICS)",https://www150.statcan.gc.ca/n1/tbl/csv/36100395-eng.zip,,
+
