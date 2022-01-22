@@ -15,7 +15,8 @@ This package is built upon a bunch of popular packages in Python ecosystem, incl
 ## Installation
 
 ```bash
-$ pip install gdphelper
+$ pip install git+https://github.com/UBC-MDS/gdphelper
+
 ```
 
 ## Usage
