@@ -6,9 +6,9 @@ import numpy as np
 def test_gdpplotter():
     
     # importing toydata from test/
-    data = pd.read_csv('tests/test_13100347.csv')
-    
-    # changing columns name manually (simulating outputs from gdpcleaner)
+    data = pd.read_csv('test/test_13100347.csv')
+    #data = pd.read_csv('36100408.csv')
+    # changing column names manually (simulating outputs from gdpcleaner)
     renamed_data = data.rename(columns={'REF_DATE': 'Date', 'GEO': 'Location',
                                         'VALUE': 'Value', 'SCALAR_FACTOR': 'Scale'})
     # defining columns to check
@@ -17,8 +17,7 @@ def test_gdpplotter():
     z = "Value"
 
     # starting the function gpdplotter
-    aggregation = "province"
-    gdpplotter(renamed_data, aggregation)
+    gdpplotter(renamed_data)
 
     # checking if a plot was drawn by the function
     num_figures = plt.gcf().number
