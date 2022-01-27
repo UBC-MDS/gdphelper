@@ -1,12 +1,6 @@
 name: ci-cd
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: [push, pull_request]
 
 jobs:
   ci:
@@ -35,6 +29,7 @@ jobs:
     # Step 8. Build documentation
     - name: Build documentation
       run: poetry run make html --directory docs/
+
   cd:
     # Only run this job if the "ci" job passes
     needs: ci
@@ -71,7 +66,7 @@ jobs:
           pip install \
           --index-url https://test.pypi.org/simple/ \
           --extra-index-url https://pypi.org/simple \
-          magmaviz
+          gdphelper
     # Step 7. Publish to PyPI
     - uses: pypa/gh-action-pypi-publish@release/v1
       with:
