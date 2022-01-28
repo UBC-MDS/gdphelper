@@ -25,6 +25,7 @@ jupyter = "^1.0.0"
 Sphinx = "^4.4.0"
 codecov = "^2.1.12"
 python-semantic-release = "^7.24.0"
+semantic-release = "^0.1.0"
 
 [tool.semantic_release]
 version_variable = "pyproject.toml:version" # version location

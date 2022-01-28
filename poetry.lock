@@ -1508,6 +1508,14 @@ cryptography = ">=2.0"
 jeepney = ">=0.6"
 
 [[package]]
+name = "semantic-release"
+version = "0.1.0"
+description = ""
+category = "dev"
+optional = false
+python-versions = ">=3.6,<4.0"
+
+[[package]]
 name = "semver"
 version = "2.13.0"
 description = "Python helper for Semantic Versioning (http://semver.org/)"
@@ -1974,7 +1982,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "da129eee1d4319a7903d3bac4fdbca50ce6b62913e49c8f454d8bc400ef7ad5b"
+content-hash = "ef2935e25a7ca7bb924efc5453e79ebc1fcd56c0539c0cdf59868095b92f50df"
 
 [metadata.files]
 alabaster = [
@@ -3068,6 +3076,10 @@ rfc3986 = [
 secretstorage = [
     {file = "SecretStorage-3.3.1-py3-none-any.whl", hash = "sha256:422d82c36172d88d6a0ed5afdec956514b189ddbfb72fefab0c8a1cee4eaf71f"},
     {file = "SecretStorage-3.3.1.tar.gz", hash = "sha256:fd666c51a6bf200643495a04abb261f83229dcb6fd8472ec393df7ffc8b6f195"},
+]
+semantic-release = [
+    {file = "semantic-release-0.1.0.tar.gz", hash = "sha256:943c4d2f5bf2f42958c1868f3c5ccabfcade6017d9d7562192d24053fb2c8efa"},
+    {file = "semantic_release-0.1.0-py3-none-any.whl", hash = "sha256:ac7bbd0aaf3bad04d812fae2979386388c9c9a1af489ed97f3fdbaa24eef2a2b"},
 ]
 semver = [
     {file = "semver-2.13.0-py2.py3-none-any.whl", hash = "sha256:ced8b23dceb22134307c1b8abfa523da14198793d9787ac838e70e29e77458d4"},
