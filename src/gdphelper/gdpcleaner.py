@@ -30,7 +30,7 @@ def gdpcleaner(gdpdata: pd.DataFrame):
 
     Examples
     --------
-    #>>> result = gdpcleaner(example_data)
+    >>> result = gdpcleaner(example_data)
     """
 
     #Check for DataFrame input argument
