@@ -18,6 +18,7 @@ def gdpplotter(cleaned_Dataframe):
         chart of GDP by the Region according to the information within the DataFrame
 
     Examples
+    --------
     >>> url = "https://www150.statcan.gc.ca/n1/tbl/csv/36100408-eng.zip"
     >>> df, x = gdpimporter(url)
     >>> cleaned_df = gdpcleaner(df)

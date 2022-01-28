@@ -43,7 +43,7 @@ def gdpdescribe(df, x, y, stats=["mean", "sd", "median"], dec=2):
 
     Examples
     --------
-    >>>gdpdescribe(df, "Value", "Location", stats=["mean", "median", "sd", "min", "max", "range_", "q75", "q25", "iqr", "nas"], dec=3)
+    >>> gdpdescribe(df, "Value", "Location", stats=["mean", "median", "sd", "min", "max", "range_", "q75", "q25", "iqr", "nas"], dec=3)
     """
     # Avoid scientific notation in the display, use decimal points
     pd.set_option("display.float_format", "{:." f"{dec}" "f}".format)
