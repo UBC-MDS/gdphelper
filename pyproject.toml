@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gdphelper"
-version = "1.0.0"
+version = "1.1.0"
 description = "A package for streamlining EDA processes for basic Data Analysis"
 authors = ["Aldo Barros, Gabriel Fairbrother, Ramiro Mejia, Wanying Ye"]
 license = "MIT"
