@@ -2,6 +2,9 @@
 
 <!--next-version-placeholder-->
 
+## v1.1.1 (2022-01-28)
+
+
 ## v1.1.0 (2022-01-28)
 ### Feature
 * Adding secrets to pypi and test pypi ([`39ee000`](https://github.com/UBC-MDS/gdphelper/commit/39ee0006d9f1a42e1fb67d40332ff0d98287591c))
