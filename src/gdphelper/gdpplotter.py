@@ -19,9 +19,6 @@ def gdpplotter(cleaned_Dataframe):
 
     Examples
     --------
-    >>> url = "https://www150.statcan.gc.ca/n1/tbl/csv/36100408-eng.zip"
-    >>> df, x = gdpimporter(url)
-    >>> cleaned_df = gdpcleaner(df)
     >>> gdpplotter(cleaned_df)
     
 
