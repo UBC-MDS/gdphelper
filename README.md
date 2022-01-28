@@ -23,7 +23,7 @@ $ pip install git+https://github.com/UBC-MDS/gdphelper
 URL = https://www150.statcan.gc.ca/n1/tbl/csv/36100400-eng.zip
 - title, data_frame = gdpimporter(URL)
 - clean_frame = gdpimporter(data_frame)
-- gdpdescribe(clean_frame ...)
+- gdpdescribe(clean_frame, "Value", "Location", stats=["mean", "median", "sd", "min", "max", "range_"], dec=2)
 - gdpplotter(clean_frame ...)
 
 ## Contributors
