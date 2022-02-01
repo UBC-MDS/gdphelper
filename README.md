@@ -1,3 +1,4 @@
+[![Documentation Status](https://readthedocs.org/projects/gdphelper/badge/?version=latest)](https://gdphelper.readthedocs.io/en/latest/?badge=latest)
 [![codecov](https://codecov.io/gh/UBC-MDS/gdphelper/branch/main/graph/badge.svg?token=dZEs5iPrE5)](https://codecov.io/gh/UBC-MDS/gdphelper)  
 
 # gdphelper
