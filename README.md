@@ -24,11 +24,16 @@ $ pip install gdphelper
 
 ## Usage
 ```python
+from gdphelper import gdpimporter
+from gdphelper import gdpcleaner
+from gdphelper import gdpdescribe
+from gdphelper import gdpplotter
+
 URL = "https://www150.statcan.gc.ca/n1/tbl/csv/36100400-eng.zip"
-title, data_frame = gdpimporter(URL)
-clean_frame = gdpimporter(data_frame)
-gdpdescribe(clean_frame, "Value", "Location", stats=["mean", "median", "sd", "min", "max", "range_"], dec=2)
-gdpplotter(clean_frame)
+data_frame, title = gdpimporter.gdpimporter(URL)
+clean_frame = gdpcleaner.gdpcleaner(data_frame)
+gdpdescribe.gdpdescribe(clean_frame, "Value", "Location", stats=["mean", "median", "sd", "min", "max", "range_"], dec=2)
+gdpplotter.gdpplotter(clean_frame)
 ```
 
 ## Contributors
