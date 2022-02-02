@@ -36,6 +36,8 @@ gdpdescribe.gdpdescribe(clean_frame, "Value", "Location", stats=["mean", "median
 gdpplotter.gdpplotter(clean_frame)
 ```
 
+for more detailed documentation, see: https://gdphelper.readthedocs.io/en/latest/
+
 ## Contributors
 
 - Aldo Barros          aldosaltao@gmail.com
